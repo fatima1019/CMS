@@ -1,0 +1,50 @@
+/* To learn more about Typescript configuration file: https://www.typescriptlang.org/docs/handbook/tsconfig-json.html. */
+/* To learn more about Angular compiler options: https://angular.dev/reference/configs/angular-compiler-options. */
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "outDir": "./dist/out-tsc",
+    "strict": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "declaration": false,
+    "experimentalDecorators": true,
+    "moduleResolution": "bundler",
+    "importHelpers": true,
+    "target": "ES2022",
+    "module": "ES2022",
+    "lib": [
+      "ES2022",
+      "dom"
+    ],
+    "baseUrl": "./",  // <-- Required for path mapping
+    "paths": {
+      "@shared/service": ["src/app/shared/service/index.ts"],
+      "@environments": ["src/environments/environment"],
+      "@models":["src/app/shared/models/index.ts"],
+      "@header": ["src/app/component/header/header.component"],
+      "@footer": ["src/app/component/footer/footer.component"],
+      "@home": ["src/app/pages/home/home.component"],
+      "@profile": ["src/app/pages/profile/profile.component"],
+      "@login": ["src/app/pages/login/login.component"],
+      "@register": ["src/app/pages/register/register.component"],
+      "@component": ["src/app/component/component.module"],
+      "@public-layouts": ["src/app/layouts/public-layouts/public-layouts.component"],
+      "@auth-layouts": ["src/app/layouts/auth-layouts/auth-layouts.component"],
+      "@shared/*": [
+        "src/app/shared/*"
+      ] // Alias setup
+    }
+  },
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
+  }
+}
